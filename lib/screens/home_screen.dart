@@ -13,7 +13,13 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(children: <Widget>[
         Expanded(child: Image.asset("assets/images/image_title.png")),
         _titleText(),
-        //TODO 横線,
+        Divider(
+          color: Colors.white,
+          height: 50.0,
+          indent: 20.0,
+          endIndent: 20.0,
+          thickness: 1.0,
+        ),
         //TODO 確認テストをするボタン,
         //TODO ラジオボタン,
         //TODO 単語一覧を見るボタン

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_own_frashcard/parts/button_with_icon.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -20,9 +21,24 @@ class _HomeScreenState extends State<HomeScreen> {
           endIndent: 20.0,
           thickness: 1.0,
         ),
-        //TODO 確認テストをするボタン,
+        //確認テストをするボタン,
+        ButtonWithIcon(
+          onPressed: () => print("確認テストを押した！"),
+          //TODO
+          icon: Icon(Icons.play_arrow),
+          label: "確認テストをする",
+          primaryColor: Colors.brown,
+          onPrimaryColor: Colors.white,
+        ),
         //TODO ラジオボタン,
-        //TODO 単語一覧を見るボタン
+        //単語一覧を見るボタン
+        ButtonWithIcon(
+            onPressed: () => print("単語一覧を押した！"),
+            //TODO
+            icon: Icon(Icons.list),
+            label: "単語一覧を見る",
+            primaryColor: Colors.grey,
+            onPrimaryColor: Colors.white),
         Text("powered by oh884U8 2024", style: TextStyle(fontFamily: "Mont"))
       ])),
     );

@@ -30,7 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
           primaryColor: Colors.brown,
           onPrimaryColor: Colors.white,
         ),
-        //TODO ラジオボタン,
+        //ラジオボタン,
+        _radioButtons(),
         //単語一覧を見るボタン
         ButtonWithIcon(
             onPressed: () => print("単語一覧を押した！"),
@@ -56,6 +57,26 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(fontSize: 24.0, fontFamily: "Mont"),
         ),
       ],
+    );
+  }
+
+  Widget _radioButtons() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 70.0),
+      child: Column(
+        children: <Widget>[
+          RadioListTile(
+              title: Text("暗記済みの単語を除外する", style: TextStyle(fontSize: 16.0)),
+              value: null,
+              groupValue: null,
+              onChanged: null),
+          RadioListTile(
+              title: Text("暗記済みの単語を含む", style: TextStyle(fontSize: 16.0)),
+              value: null,
+              groupValue: null,
+              onChanged: null),
+        ],
+      ),
     );
   }
 }
